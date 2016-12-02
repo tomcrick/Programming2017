@@ -30,7 +30,7 @@
   and \url{@ProfTomCrick}}
 \affiliation{Department of Computing \& Information Systems, Cardiff
   Metropolitan University, UK}
-\author[a]{James H. Davenport}
+\author{James H. Davenport}
 \authorinfo{is Hebron \& Medlock Professor of Information Technology at
   the University of Bath. Contact: \email{j.h.davenport@bath.ac.uk}
   and \url{@JamesHDavenport}}
@@ -139,7 +139,7 @@
 %     Knowledge: What new facts were uncovered? If the research was not results oriented, what new capabilities are enabled by the work?
 %     Grounding: What argument, feasibility proof, artifacts, or results and evaluation support this work?
 %     Importance: Why does this work matter?
-\input abstract.tex
+\input{abstract.tex}
 %\begin{abstract}
 %This paper reports the results of the first survey of introductory
 %programming courses ($\mathrm{N} = 80$) taught at UK universities as
@@ -218,26 +218,28 @@ In the context of increasing international focus on curriculum and
 qualification reform to support computer science education and digital
 skills in schools, the four education systems of the UK have proposed
 and implemented a variety of
-changes~\cite{rs:2012,brown-et-al-sigcse2013,brown-et-al-toce2014},
-particular in England, with a new compulsory computing curriculum for
-ages 5-16 from September 2014~\cite{dfecomp:2013}. For universities
-across the UK offering computer science degrees~\cite{qaacomp:2016},
-this school curriculum reform has had uncertain (and emerging) impact
-on the delivery of their undergraduate programmes, with the diversity
-of the educational background of applicants likely to increase before
-it narrows: it is certainly possible now for prospective students to
-have anywhere from zero to four or five years experience (and
-potentially two school qualifications) in computer science with some
-knowledge of programming.
+changes~\cite{rs:2012,brown-et-al-sigcse2013,crick+moller-wipsce2015},
+particular in England~\cite{brown-et-al-toce2014}, with a new
+compulsory computing curriculum for ages 5-16 from September
+2014~\cite{dfecomp:2013}. For universities across the UK offering
+computer science degrees~\cite{qaacomp:2016}, this school curriculum
+reform has had uncertain (and emerging) impact on the delivery of
+their undergraduate programmes, with the diversity of the educational
+background of applicants likely to increase before it narrows: it is
+certainly possible now for prospective students to have anywhere from
+zero to four or five years experience (and potentially two school
+qualifications) in computer science with some knowledge of
+programming.
 
 Over the past three years, there has been increasing scrutiny of the
 quality of teaching in UK universities, partly linked to the current
 levels -- and potential future increases -- of tuition fees (generally
 paid by the student through government-supported loans), as well as
 relative levels of graduate employability and the perceived value of
-professional body accreditation by industry. In February 2015, the UK (but in this respect only responsible for England)
-Department of Business, Innovation \& Skills initiated independent
-reviews of STEM degree accreditation and graduate
+professional body accreditation by industry. In February 2015, the UK
+(but in this respect only responsible for England) Department of
+Business, Innovation \& Skills initiated independent reviews of STEM
+degree accreditation and graduate
 employability\footnote{\url{https://www.gov.uk/government/collections/graduate-employment-and-accreditation-in-stem-independent-reviews}},
 with a specific focus -- the Shadbolt review~\cite{shadbolt:2016} --
 on computer science degree accreditation and graduate employability,
@@ -262,11 +264,12 @@ Thus, in this evolving environment of new policy and curricula, as
 well as the emerging demands of innovative pedagogies and high-quality
 learning and teaching for computer science degree programmes, we
 present the findings from the first national scale survey of
-introductory programming languages at UK universities. Through this
-first UK wide survey of universities, we identify and analyse trends
-in student numbers, programming paradigm, programming languages and
-environment/tools used, as well as the reasons for choice of such are
-reported.
+introductory programming languages at UK universities, providing
+context for analysis of the art, science and engineering of
+programming. Through this first UK wide survey of universities, we
+identify and analyse trends in student numbers, programming paradigm,
+programming languages and environment/tools used, as well as the
+reasons for choice of such are reported.
 
 % Other aspects of first programming courses such as instructor
 % experience, 
@@ -763,7 +766,27 @@ categorised as ``{\emph{Software Engineering}}''. Results of this
 question are shown in Figure~\ref{fig:aims}.
 
 
-\section{General Discussion}\label{discussion}
+\section{Discussion}\label{discussion}
+
+\subsection{Comparison with Australasia}
+
+Here we compare with the latest Australasian
+survey~\cite{mason+cooper:2014}; we have already commented on the
+major difference in language choice, which colours many of the other
+comparisons. In fact, the UK's language choices seem more similar to
+Australasia's 2010 choices~\cite{mason-et-al:2012} and \cite[Table
+4]{mason+cooper:2014} than even Australasia's 2013 choices. It is hard
+to know which comes first, but we also notice that our
+difficulty/utility data (Figure \ref{fig:utility}) is somewhat
+different from \cite[Figures 7/8]{mason+cooper:2014}.
+
+Another difference shows up in the tools/environments are: Figure
+\ref{fig:tools} versus \cite{mason+cooper:2014}'s Figure 11. There,
+``{\emph{None}}'' and ``{\emph{Other}}'' were the top two categories,
+with IDLE, at 15\%, the most popular named product. In the UK,
+``{\emph{None}}'' is second, ``{\emph{Other}}'' is sixth and IDLE
+eighth. Eclipse, the UK favourite, was an ``also ran'' in
+\cite{mason+cooper:2014}.
 
 \subsection{The UK Context}
 
@@ -812,26 +835,6 @@ pedagogies for
 programming~\cite{crick-et-al-hea:2015,davenport-et-al:latice2016},
 but we have not yet seen the necessary cascading of best practice and
 wider national impact.
-
-\subsection{Comparison with Australasia}
-
-Here we compare with the latest Australasian
-survey~\cite{mason+cooper:2014}. We have already commented on the
-major difference in language choice, which colours many of the other
-comparisons. In fact, the UK's language choices seem more similar to
-Australasia's 2010 choices~\cite{mason-et-al:2012} and \cite[Table
-4]{mason+cooper:2014} than even Australasia's 2013 choices. It is hard
-to know which comes first, but we also notice that our
-difficulty/utility data (Figure \ref{fig:utility}) is somewhat
-different from \cite[Figures 7/8]{mason+cooper:2014}.
-
-Another difference shows up in the tools/environments are: Figure
-\ref{fig:tools} versus \cite{mason+cooper:2014}'s Figure 11. There,
-``{\emph{None}}'' and ``{\emph{Other}}'' were the top two categories,
-with IDLE, at 15\%, the most popular named product. In the UK,
-``{\emph{None}}'' is second, ``{\emph{Other}}'' is sixth and IDLE
-eighth. Eclipse, the UK favourite, was an ``also ran'' in
-\cite{mason+cooper:2014}.
 
 
 \section*{Acknowledgements}
