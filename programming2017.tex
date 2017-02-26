@@ -1,6 +1,6 @@
 % -*- coding: utf-8; -*-
 % vim: set fileencoding=utf-8 :
-\documentclass[english,submission]{programming}
+\documentclass[english]{programming}
 %% First parameter: the language is 'english'.
 %% Second parameter: use 'submission' for initial submission, remove it for camera-ready (see 4.1)
 
@@ -167,32 +167,37 @@
 
 For many years -- and increasingly at all levels of compulsory and
 post-compulsory education -- the choice of programming language to
-introduce the ``art''~\cite{knuth:2011} or
-``discipline''~\cite{dijkstra:1976} of computer programming via key
-programming principles, constructs, syntax and semantics has been
+introduce the ``art''~\cite{knuth:2011}, ``science''~\cite{gries:1981}
+and ``discipline''~\cite{dijkstra:1976} of computer programming via
+key programming principles, constructs, syntax and semantics has been
 regularly revisited. Even in the context of what are perceived to be
-the most difficult introductory topics in computer science degrees,
+the most challenging introductory topics in computer science degrees,
 numerous key themes across programming frequently
 appear~\cite{dale:2006}.
 
-So what is a good first programming language? The issues surrounding
+So what makes a good first programming language? Perhaps more
+importantly, how are we defining ``good''? The issues surrounding
 choosing a first language~\cite{gupta:2004,kaplan:2010} -- and a
 search of the ACM Digital Library identified a number of papers of the
 form ``{\emph{X as a first programming language}}'', going as far back
-as the 1970s -- appear to be legion, especially with discussions of
-what precisely we aim to achieve from teaching
-programming~\cite{fincher:1999,schult+bennedsen:2006}, from a new
-focus on developing transferable computational thinking and problem
-solving skills~\cite{wing:2008}, through to the potential impact on
-students' grades and
-attainment~\cite{simon-et-al:2006,bergin+reilly:2006,porter-et-al:2013,ivanovic-et-al:2015}. It
+as the 1970s~\cite{gries:1974} -- appear to be legion, especially with
+wider discussions of precisely what we aim to achieve from teaching
+programming~\cite{fincher:1999,schult+bennedsen:2006}; from the
+potential impact on students' grades and
+attainment~\cite{simon-et-al:2006,bergin+reilly:2006,porter-et-al:2013,ivanovic-et-al:2015},
+to a renewed focus on developing transferable computational thinking
+and problem solving
+skills~\cite{papert:1993,wing:2008,tedre+denning:2016}. There is a
+belief that programming -- as opposed to, say analysis of algorithms,
+a closely related theoretical skill -- is fundamentally a craft that
+needs immersion and practice~\cite{fincher:1999,milne+rowe:2016}. It
 appears that decades of research on the teaching of introductory
 programming has had limited effect on classroom
 practice~\cite{pears-et-al:2007}; although relevant research exists
 across several disciplines including education and cognitive science,
-disciplinary differences have made this material inaccessible to many
-computing educators. Furthermore, computer science instructors have
-not had access to comprehensive surveys of research in this
+disciplinary differences have often made this material inaccessible to
+many computing educators. Furthermore, computer science instructors
+have not had access to comprehensive surveys of research in this
 area~\cite{mccracken-et-al:2001,pears-et-al:2007}.
 
 However, in Australia and New Zealand there have been longitudinal
@@ -200,7 +205,8 @@ data
 collections~\cite{deraadt-et-al:2004,mason-et-al:2012,mason+cooper:2014}
 surveying the teaching of introductory programming courses in
 universities. Surprisingly, such surveys have not been conducted
-elsewhere on this scale (in the U.S. \cite{guo:2014} only covers the ``top 39'' universities), and this paper reports the findings from
+elsewhere on this scale (in the USA, \cite{guo:2014} only covers the
+``top 39'' universities), and this paper reports the findings from
 running the first such similar survey in the UK.
 
 We remind the reader that the UK consists of four nations with an
@@ -209,17 +215,17 @@ overall population of 64.5 million: England (54.3 million), Scotland
 million). In 1997, Scotland and Wales held referendums which
 determined in both cases the desire for increased self-government
 (along with Northern Ireland and the 1998 Good Friday Agreement),
-creating assemblies to which a variety of powers -- in particular,
-education -- were devolved from the UK Parliament. Thus, we now have
-an educational policy ecosystem historically ruled by one parliament
-but now comprising three devolved assemblies responsible for four
-separate education systems.
+creating national assemblies to which a variety of powers -- in
+particular, education -- were devolved from the UK Parliament. Thus,
+we now have an educational policy ecosystem in the UK that was
+historically ruled by one parliament but now comprising three devolved
+assemblies responsible for four separate education systems.
 
 In the context of increasing international focus on curriculum and
 qualification reform to support computer science education and digital
 skills in schools, the four education systems of the UK have proposed
 and implemented a variety of
-changes~\cite{rs:2012,brown-et-al-sigcse2013,crick+moller-wipsce2015},
+changes~\cite{crick+sentance:2011,rs:2012,brown-et-al-sigcse2013,crick+moller-wipsce2015},
 particular in England~\cite{brown-et-al-toce2014}, with a new
 compulsory computing curriculum for ages 5-16 from September
 2014~\cite{dfecomp:2013}. For universities across the UK offering
@@ -228,29 +234,30 @@ reform has had uncertain (and emerging) impact on the delivery of
 their undergraduate programmes, with the diversity of the educational
 background of applicants likely to increase before it narrows: it is
 certainly possible now for prospective students to have anywhere from
-zero to four or five years experience (and potentially two school
+zero to four or more years experience (and potentially two school
 qualifications) in computer science with some knowledge of
 programming.
 
-Over the past three years, there has been increasing scrutiny of the
-quality of teaching in UK universities, partly linked to the current
-levels -- and potential future increases -- of tuition fees (generally
-paid by the student through government-supported loans), as well as
-relative levels of graduate employability and the perceived value of
+Since 2012, there has been increasing scrutiny of the quality of
+teaching in UK universities, partly linked to the current levels --
+and potential future increases -- of tuition fees (generally paid by
+the student through government-supported loans), as well as relative
+levels of graduate employability and the perceived value of
 professional body accreditation by industry. In February 2015, the UK
 (but in this respect only responsible for England) Department of
-Business, Innovation \& Skills initiated independent reviews of STEM
-degree accreditation and graduate
+Business, Innovation \& Skills initiated independent reviews of
+science, technology, engineering and mathematics (STEM) degree
+accreditation and graduate
 employability\footnote{\url{https://www.gov.uk/government/collections/graduate-employment-and-accreditation-in-stem-independent-reviews}},
 with a specific focus -- the Shadbolt review~\cite{shadbolt:2016} --
 on computer science degree accreditation and graduate employability,
 reporting back in May 2016. Alongside a number of recommendations to
-address the apparently relatively high unemployment rates of computer sciences
-graduates, particular on the quality of data, course types, gender and
-demographics, the Shadbolt review split generalist universities in
-England into three bands, based on their average (across all subjects)
-entrance tariff (i.e. average qualifications of entrants, defined by the
-official UCAS
+address the apparently relatively high unemployment rates of computer
+sciences graduates, particular on the quality of data, course types,
+gender and demographics, the Shadbolt review split generalist
+universities in England into three bands, based on their average
+(across all subjects) entrance tariff (i.e. average qualifications of
+entrants, defined by the national UCAS
 Tariff\footnote{\url{https://www.ucas.com/advisers/guides-and-resources/tariff-2017}});
 we have followed that banding during our analysis of the English
 results, so our data should allow comparisons.
@@ -258,21 +265,20 @@ results, so our data should allow comparisons.
 \begin{figure}
 \begin{center}
 \subimport{plots/}{tariffGroupCompareWide.tex}
-\caption{The number of responding universities per Nation/   
- Tariff Group\label{fig:TG}}
+\caption{The number of responding universities per Nation/Tariff Group\label{fig:TG}}
 \end{center}
 \end{figure}
 
-Thus, in this evolving environment of new policy and curricula, as
+Thus, in this evolving environment of new policies and curricula, as
 well as the emerging demands of innovative pedagogies and high-quality
 learning and teaching for computer science degree programmes, we
 present the findings from the first national scale survey of
-introductory programming languages at UK universities, providing
-context for analysis of the art, science and engineering of
-programming. Through this first UK wide survey of universities, we
+introductory programming languages at UK universities, providing a
+baseline for deeper analysis of the art, science and engineering of
+programming. Through this first UK-wide survey of universities, we
 identify and analyse trends in student numbers, programming paradigm,
 programming languages and environment/tools used, as well as the
-reasons for choice of such are reported.
+underpinning rationale for their selection.
 
 % Other aspects of first programming courses such as instructor
 % experience, 
@@ -855,7 +861,10 @@ pedagogies for
 programming~\cite{crick-et-al-hea:2015,davenport-et-al:latice2016},
 but we have not yet seen the necessary development of sustainable
 discipline-specific communities of practice, both at the local and
-national level, to capture and share best practice.
+national level, to capture and share best practice\footnote{However, a
+new initiative announced by the Royal Society in 2016 appears to be
+addressing this in UK schools:
+\url{https://royalsociety.org/topics-policy/projects/computing-education/}}.
 
 \section{Future Work}
 
