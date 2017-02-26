@@ -4,7 +4,7 @@ all: $(targets)
 
 pdflatex = pdflatex -interaction=errorstopmode -halt-on-error
 
-%.pdf:  %.tex programming2017.bib
+%.pdf:  %.tex abstract.tex programming2017.bib
 	$(pdflatex) $<
 	bibtex $*
 	$(pdflatex) $<
